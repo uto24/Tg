@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const database = firebase.database();
     
     // !!! আপনার Railway অ্যাপের URL এখানে দিন !!!
-    const BACKEND_URL = 'https://your-railway-app-name.up.railway.app'; 
+    const BACKEND_URL = 'https://telegramp-production.up.railway.app'; 
 
     const user = tg.initDataUnsafe?.user;
     
