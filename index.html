@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earning App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Telegram WebApp Script -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <h3 id="user-greeting">Welcome!</h3>
+            <p>Balance: <span id="balance-display">0</span> Coins</p>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Home Page -->
+            <div id="home-page" class="page active">
+                <h2>Welcome to Our App!</h2>
+                <div class="notice-card">
+                    <h4>Important Notice</h4>
+                    <p>Watch ads daily to earn coins. Invite your friends to get referral bonuses!</p>
+                </div>
+                <div class="tutorial-card">
+                    <h4>How to Earn?</h4>
+                    <ol>
+                        <li>Go to the 'Task' tab.</li>
+                        <li>Click on 'Watch Ad'.</li>
+                        <li>Wait for the ad to finish.</li>
+                        <li>Your balance will be updated automatically.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Task Page -->
+            <div id="task-page" class="page">
+                <h2>Ad Tasks</h2>
+                <div class="task-stats">
+                    <p>Ads Watched Today: <span id="watched-ads">0</span></p>
+                    <p>Remaining Ads: <span id="remaining-ads">400</span></p>
+                    <p>Daily Limit: 400 Ads</p>
+                </div>
+                <button id="watch-ad-btn" class="action-btn">Watch Ad (100 Coins)</button>
+            </div>
+
+            <!-- Account Page -->
+            <div id="account-page" class="page">
+                <h2>My Account</h2>
+                <ul class="account-info">
+                    <li><strong>Name:</strong> <span id="account-name"></span></li>
+                    <li><strong>Username:</strong> <span id="account-username"></span></li>
+                    <li><strong>User ID:</strong> <span id="account-uid"></span></li>
+                    <li><strong>Balance:</strong> <span id="account-balance"></span> Coins</li>
+                </ul>
+                <button id="referral-link-btn" class="action-btn">Get My Referral Link</button>
+            </div>
+
+            <!-- Withdraw Page -->
+            <div id="withdraw-page" class="page">
+                <h2>Withdraw</h2>
+                <div class="maintenance-notice">
+                    <p>Withdrawal system is currently under maintenance. Please check back later.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-btn" data-page="home-page">Home</button>
+            <button class="nav-btn" data-page="task-page">Task</button>
+            <button class="nav-btn" data-page="account-page">Account</button>
+            <button class="nav-btn" data-page="withdraw-page">Withdraw</button>
+        </nav>
+    </div>
+
+    <!-- Firebase and Monetag SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    
+    <!-- IMPORTANT: Monetag SDK -->
+    <script src='//libtl.com/sdk.js' data-zone='9604026' data-sdk='show_9604026'></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
